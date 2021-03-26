@@ -1,5 +1,7 @@
 # Chronicle
 
+![CI](https://github.com/drowzy/chronicle/actions/workflows/ci.yml/badge.svg)
+
 An experimental distributed commit log with a Kafkaesque storage layer.
 
 ## Installation
