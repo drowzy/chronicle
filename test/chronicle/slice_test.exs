@@ -8,7 +8,10 @@ defmodule Chronicle.SliceTest do
       {:ok, slice: slice}
     end
 
-    test "returns a new Slice handle", %{slice: slice} do
+    test "returns a new Slice handle with log, opts, fd set ", %{slice: slice} do
+      assert %Slice.Log{} = slice.log
+      assert %Slice.Options{} = slice.opts
+      assert 'test/0' = slice.fd
     end
   end
 end

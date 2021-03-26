@@ -23,6 +23,9 @@ defmodule Chronicle.Slice.LogTest do
   test "write/2 returns an error if the buffer does not fit inside the file" do
     log = %Log{max_size: 10, size: 10, fd_write: fn _, _ -> :ok end}
 
-    assert {:error, {:nospace, _}} = Log.write(log, Enum.map(0..5, &inspect/1))
+    assert {:error, %Chronicle.Error{reason: {reason_code, _, _, _}}} =
+             Log.write(log, Enum.map(0..5, &inspect/1))
+
+    assert reason_code == :enospc
   end
 end
