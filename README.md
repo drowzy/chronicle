@@ -1,6 +1,6 @@
 # Chronicle
 
-An experimental distributed commit log with a Kafkaesque storage protocol
+An experimental distributed commit log with a Kafkaesque storage layer.
 
 ## Installation
 
