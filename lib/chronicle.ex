@@ -1,0 +1,2 @@
+defmodule Chronicle do
+end
