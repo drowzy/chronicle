@@ -33,6 +33,7 @@ defmodule Chronicle.Slice.Options do
       opts
       |> Keyword.fetch!(:offset)
       |> to_string()
+      |> String.pad_leading(22, "0")
 
     base_path = Keyword.fetch!(opts, :path)
     path = Path.join([base_path, file_base])
